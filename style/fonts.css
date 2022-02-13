@@ -1,0 +1,18 @@
+@font-face {
+  font-family: "RobotoRegular";
+  src: url("../fonts/Roboto-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "RobotoMedium";
+  src: url("../fonts/Roboto-Medium.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "RubikBeastly";
+  src: url("../fonts/RubikBeastly-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
