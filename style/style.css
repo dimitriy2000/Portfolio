@@ -1,43 +1,59 @@
 @charset "utf-8";
-*,*::before,*::after{
+
+*,
+*::before,
+*::after {
     padding: 0;
     margin: 0;
-    border: 0;
     box-sizing: border-box;
 }
+
 /*Шрифт при выделении*/
-::-moz-selection{
+::-moz-selection {
     background: black;
     color: #FFF;
 }
 
-::selection{
+::selection {
     background: black;
     color: #FFF;
 }
 
-a{
+a {
     text-decoration: none;
     display: inline-block;
 }
 
-ul,ol,li{
+ul,
+ol,
+li {
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-img, svg{
+img,
+svg {
     vertical-align: top;
 }
-body{
+
+br {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+body {
     font-family: 'Roboto', sans-serif;
     font-family: 'PT Serif', serif;
     font-weight: 400;
     font-size: 14px;
-    line-height: 18px;
+
     color: #5e5e5e;
 }
+
 /*p{
     font-family: "RubikBeastly";
     font-weight: 400;
@@ -46,22 +62,25 @@ body{
     min-height: 100%;
     overflow: hidden;
 }*/
-.container{
+.container {
     max-width: 1170px;
     margin: 0 auto;
     padding: 0 15px;
 }
-.header__top{
+
+.header__top {
+    display: block;
     background-color: #272b33;
     height: 50px;
 }
-.header__content::after{
+
+.header__content::after {
     content: "";
     clear: both;
     display: block;
 }
 
-.header__mail{
+.header__mail {
     font-family: 'Roboto', sans-serif;
     color: #dfdddf;
     text-align: center;
@@ -70,10 +89,12 @@ body{
     margin-top: 18px;
 
 }
-.header__mail:hover{
+
+.header__mail:hover {
     color: #c5c5c5;
 }
-.header__gmail{
+
+.header__gmail {
     margin-right: 10px;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -82,11 +103,110 @@ body{
     user-select: none;
 }
 
-.header__logo{
+.header__logo {
     margin-top: 10px;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
     -moz-user-select: none;
     user-select: none;
+}
+
+.hello {
+    background: url(../img/hello.jpg);
+    background-color: #222;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: 50% 0px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding: 0;
+    height: 600px;
+
+}
+
+.hello__content {
+    position: absolute;
+    width: 100%;
+    top: 30%;
+    text-align: center;
+
+}
+
+.hello__hi h1 {
+    display: inline-flex;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: -0.2em 0 0 rgba(0, 0, 0, 0.5), 0.2em 0 0 rgba(0, 0, 0, 0.5);
+    font-size: 4.98em;
+    color: #ddd;
+    transform: translate(45%, -150%);
+    opacity: 0;
+    transition: all 0.8s ease 0s;
+}
+
+.hello__hi h1._active {
+    transform: translate(0px, 0px);
+    opacity: 1;
+}
+
+.hello__text h2 {
+    display: inline-flex;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: -0.2em 0 0 rgba(0, 0, 0, 0.5), 0.2em 0 0 rgba(0, 0, 0, 0.5);
+    font-size: 3.63em;
+    color: #ddd;
+    transform: translate(-45%, 150%);
+    opacity: 0;
+    transition: all 0.8s ease 0s;
+}
+
+.hello__text h2._active {
+    transform: translate(0px, 0px);
+    opacity: 1;
+}
+
+
+.progress_bar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    width: 0;
+    height: 4px;
+    background-color: rgb(30, 63, 247);
+}
+
+h2 {
+    text-align: center;
+    font-size: 30px;
+    color: #222;
+}
+
+h3 {
+    text-indent: 13px;
+    font-size: 25px;
+}
+
+p {
+    text-indent: 13px;
+    font-size: 20px;
+    color: #222;
+}
+
+.code {
+    background-color: rgba(74, 138, 14, 0.4);
+}
+
+footer {
+    margin-top: 30px;
+    background-color: #272b33;
+    height: 50px;
+    text-align: center;
+
+}
+
+.foot {
+    padding-top: 15px;
+    color: #FFF;
 }

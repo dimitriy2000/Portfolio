@@ -9,16 +9,14 @@
   <meta content="true" name="HandheldFriendly">
   <meta content="width" name="MobileOptimized">
   <meta content="yes" name="apple-mobile-web-app-capable">
-  <!--Иконки-->
+
+  <!--..........Иконки..........-->
   <!--десктопные браузеры-->
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="120x120" href="favicon/favicon-120x120.png">
-    <!--Chrome на Android-->
-  <link rel="manifest" href="manifest.json">
-  <meta name="theme-color" content="#1a4180">
   <!--андройд браузер-->
   <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-icon-192x192.png">
   <!--значки для apple-->
@@ -42,6 +40,10 @@
   <meta name="msapplication-config" content="browserconfig.xml">
   <!--имя для windows-->
   <meta name="application-name" content="DIMHUB Win">
+  <!--Chrome на Android-->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#1a4180">
+
   <!--Стили и Шрифты-->
   <style>
   </style>
@@ -54,7 +56,9 @@
 </head>
 
 <body>
+
   <div class="wrapper">
+    <div class="progress_bar"></div>
     <header class="header">
       <div class="header__top">
         <div class="container">
@@ -78,8 +82,73 @@
       </div>
     </header>
 
+    <section class="hello">
+      <div class="hello__content">
+        <div class="hello__hi">
+          <h1 class="_animate-items _animate-no-repeat">DIMHUB</h1>
+        </div>
+        <div class="hello__text">
+          <h2 class="_animate-items _animate-no-repeat">WEB DEVELOPER</h2>
+        </div>
+      </div>
+    </section>
+    <div class="container"><br>
+      <h2>Качественный контент (null)</h2><br>
+      <hr><br>
+      <h2>Копирайтинг</h2><br>
+      <p><strong>Копирайтинг</strong> - что это и для чего он нужен? Перед тем как это узнать надо поговорить
+        непосредственно о
+        том, что такое копирайт и как он обозначается.</p><br>
+      <p>В интернете <b>копирайт</b> означает <b>авторское право</b> на созданную интеллектуальную собственность, к ней
+        относятся: картинки, видео, тексты, музыка, фотографии, программы, шрифты и т.п. Как то официально
+        регистрировать авторство на своё творчество не обязательно, ведь оно вступает в силу сразу после его создания.
+        Так же у копирайта есть свой символ &copy;. Чтобы обозначить свои права на контент, в подвале сайта достаточно
+        указать небольшую конструкцию: <span class="code">&amp;copy; год_создания-текущий_год, имя автора (название
+          сайта)</span> . Если же контент на сайте не является авторским, а сплагиаченым с другого интернет ресурса,
+        тогда его ранжирование в поисковике снижается, а то и вовсе скрывается. Чтобы сайт не "исчезал" из поисковой
+        выдачи, <b>текстовый контент</b> должен быть оригинальным.
+      </p><br>
+      <p>Создание оригинального текстового контента это и есть <b>копирайтинг</b>. Текстовый контент - это статьи,
+        посты, блоги, авторские тексты, рекламные материалы и т.п. Копирайтинг больше нужен, чтобы удержать посетителя
+        на сайте, а чтобы привлечь его на сайт нужно уже использовать SEO-копирайтинг.
+      </p><br>
+      <h3>SEO копирайтинг</h3><br>
+      <p>Если кратко, <b>SEO-копирайтинг</b> - это создание авторского контента с использованием ключевых слов и тегов
+        HTML, наличие и правильность расположения которых учитываются поисковыми системами при выдачи пользователю.
+        Слова, которые мы вводим в поисковик и те по которым выдаётся сайт, являются <b>ключевыми</b>. Они должны
+        использоваться в контексте, не повторяться слишком часто и их объём должен быть не больше 5% от всего текста.
+      </p><br>
+      <p>Так же не стоит забывать про <b>теги</b>, так заголовок первого уровня &lt;h1&gt; анализируется поисковыми
+        роботами в первую очередь. Разумеется иерархия тегов H идёт от 1 к 6, от наиболее к наименее
+        важному. Добавление в заголовки ключевых слов придаёт значимость сайту среди выдачи в поиске, а грамотное
+        структурирование тегов повышает читабельность текста.</p><br>
+      <p>Но не стоит забывать что SEO постоянно изменяется и совершенствуется, и поэтому стоит время от времени
+        пополнять свои знания о поисковой оптимизации, и стремиться создавать более качественный и востребованный
+        контент.</p>
+    </div>
+    <footer>
+      <div class="container">
+        <p class="foot">&copy; 2022 DIMHUB</p>
+      </div>
+    </footer>
   </div>
-  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>-->
+  <script>
+    // Линия сверху aka progress bar
+    const PROGRESS_BAR = document.querySelector('.progress_bar');
+
+    window.addEventListener('scroll', progressBar)
+
+    function progressBar(e) {
+      let windowScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      let windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      let percent = windowScroll / windowHeight * 100;
+
+      PROGRESS_BAR.style.width = percent + '%';
+    }
+  </script>
+  <script src="js/main.js"></script>
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  -->
 </body>
 
 </html>
