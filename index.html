@@ -132,20 +132,6 @@
       </div>
     </footer>
   </div>
-  <script>
-    // Линия сверху aka progress bar
-    const PROGRESS_BAR = document.querySelector('.progress_bar');
-
-    window.addEventListener('scroll', progressBar)
-
-    function progressBar(e) {
-      let windowScroll = document.body.scrollTop || document.documentElement.scrollTop;
-      let windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      let percent = windowScroll / windowHeight * 100;
-
-      PROGRESS_BAR.style.width = percent + '%';
-    }
-  </script>
   <script src="js/main.js"></script>
   <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   -->

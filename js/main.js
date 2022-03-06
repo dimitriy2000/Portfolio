@@ -1,3 +1,15 @@
+// Линия сверху aka progress bar
+const PROGRESS_BAR = document.querySelector('.progress_bar');
+
+window.addEventListener('scroll', progressBar)
+
+function progressBar(e) {
+  let windowScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  let windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  let percent = windowScroll / windowHeight * 100;
+
+PROGRESS_BAR.style.width = percent + '%';
+}
 // Анимация текста при загрузке страницы и скроле(откл)
 const ANIMATE_ITEMS = document.querySelectorAll('._animate-items');
 

@@ -54,6 +54,15 @@ body {
     color: #5e5e5e;
 }
 
+.progress_bar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    width: 0;
+    height: 4px;
+    background-color: rgb(13, 10, 54);
+}
+
 /*p{
     font-family: "RubikBeastly";
     font-weight: 400;
@@ -168,14 +177,7 @@ body {
 }
 
 
-.progress_bar {
-    position: fixed;
-    left: 0;
-    right: 0;
-    width: 0;
-    height: 4px;
-    background-color: rgb(30, 63, 247);
-}
+
 
 h2 {
     text-align: center;
@@ -210,3 +212,5 @@ footer {
     padding-top: 15px;
     color: #FFF;
 }
+
+/* JS kod */
