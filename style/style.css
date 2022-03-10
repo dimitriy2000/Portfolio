@@ -96,7 +96,6 @@ body {
     font-size: 18px;
     float: right;
     margin-top: 18px;
-
 }
 
 .header__mail:hover {
@@ -152,10 +151,10 @@ body {
     display: inline-flex;
     background-color: rgba(0, 0, 0, 0.5);
     box-shadow: -0.2em 0 0 rgba(0, 0, 0, 0.5), 0.2em 0 0 rgba(0, 0, 0, 0.5);
-    font-size: 4.98em;
+    font-size: 4.7em;
     color: #ddd;
     /* анимация */
-    transform: translate(45%, -200%);
+    transform: translate(0%, -200%);
     opacity: 0;
     transition: all 0.8s ease 0.3s;
 }
@@ -169,11 +168,11 @@ body {
 .hello__text h2 {
     display: inline-flex;
     background-color: rgba(0, 0, 0, 0.5);
-    box-shadow: -0.2em 0 0 rgba(0, 0, 0, 0.5), 0.2em 0 0 rgba(0, 0, 0, 0.5);
-    font-size: 3.63em;
+    box-shadow: -0.1em 0 0 rgba(0, 0, 0, 0.5), 0.1em 0 0 rgba(0, 0, 0, 0.5);
+    font-size: 3.4em;
     color: #ddd;
     /* анимация */
-    transform: translate(-45%, 200%);
+    transform: translate(0%, 200%);
     opacity: 0;
     transition: all 0.8s ease 0.3s;
 }
