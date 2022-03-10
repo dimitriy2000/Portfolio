@@ -10,26 +10,18 @@
 
 /*Шрифт при выделении*/
 ::-moz-selection {
-    background: black;
+    background: rgba(0, 0, 0, 0.8);
     color: #FFF;
 }
 
 ::selection {
-    background: black;
+    background: rgba(0, 0, 0, 0.8);
     color: #FFF;
 }
 
 a {
     text-decoration: none;
     display: inline-block;
-}
-
-ul,
-ol,
-li {
-    list-style: none;
-    margin: 0;
-    padding: 0;
 }
 
 img,
@@ -54,6 +46,10 @@ body {
     color: #5e5e5e;
 }
 
+/*  */
+/*  */
+/*  */
+/*  */
 .progress_bar {
     position: fixed;
     left: 0;
@@ -77,6 +73,10 @@ body {
     padding: 0 15px;
 }
 
+/*  */
+/*  */
+/*  */
+/*  */
 .header__top {
     display: block;
     background-color: #272b33;
@@ -121,6 +121,10 @@ body {
     user-select: none;
 }
 
+/*  */
+/*  */
+/*  */
+/*  */
 .hello {
     background: url(../img/hello.jpg);
     background-color: #222;
@@ -150,12 +154,14 @@ body {
     box-shadow: -0.2em 0 0 rgba(0, 0, 0, 0.5), 0.2em 0 0 rgba(0, 0, 0, 0.5);
     font-size: 4.98em;
     color: #ddd;
-    transform: translate(45%, -150%);
+    /* анимация */
+    transform: translate(45%, -200%);
     opacity: 0;
-    transition: all 0.8s ease 0s;
+    transition: all 0.8s ease 0.3s;
 }
 
 .hello__hi h1._active {
+    /* анимация */
     transform: translate(0px, 0px);
     opacity: 1;
 }
@@ -166,19 +172,22 @@ body {
     box-shadow: -0.2em 0 0 rgba(0, 0, 0, 0.5), 0.2em 0 0 rgba(0, 0, 0, 0.5);
     font-size: 3.63em;
     color: #ddd;
-    transform: translate(-45%, 150%);
+    /* анимация */
+    transform: translate(-45%, 200%);
     opacity: 0;
-    transition: all 0.8s ease 0s;
+    transition: all 0.8s ease 0.3s;
 }
 
 .hello__text h2._active {
+    /* анимация */
     transform: translate(0px, 0px);
     opacity: 1;
 }
 
-
-
-
+/*  */
+/*  */
+/*  */
+/*  */
 h2 {
     text-align: center;
     font-size: 30px;
@@ -196,10 +205,39 @@ p {
     color: #222;
 }
 
-.code {
-    background-color: rgba(74, 138, 14, 0.4);
+li {
+    text-indent: 2px;
+    margin-left: 30px;
+    font-size: 19px;
+    font-weight: 500;
+    color: rgb(29, 29, 29);
 }
 
+.code {
+    background-color: rgba(74, 138, 14, 0.4);
+    border-radius: 4px;
+}
+
+.code::selection {
+    background-color: rgb(195, 0, 255);
+    color: #FFF;
+}
+
+.quote {
+    background-color: rgba(164, 46, 175, 0.3);
+    border-radius: 3px;
+}
+
+.quote::selection {
+    background-color: rgb(163, 73, 73) !important;
+    color: #FFF !important;
+}
+
+
+/*  */
+/*  */
+/*  */
+/*  */
 footer {
     margin-top: 30px;
     background-color: #272b33;
@@ -212,5 +250,10 @@ footer {
     padding-top: 15px;
     color: #FFF;
 }
+
+/* strong::selection {
+    background-color: inherit;
+    color: inherit;
+} */
 
 /* JS kod */
