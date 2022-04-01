@@ -7,25 +7,38 @@
     margin: 0;
     box-sizing: border-box;
 }
+
 /*Шрифт при выделении*/
 ::-moz-selection {
     background: rgba(0, 0, 0, 0.8);
     color: #FFF;
 }
+
+.dark-theme ::-moz-selection {
+    background: rgba(23, 56, 204, 0.699);
+}
+
 ::selection {
     background: rgba(0, 0, 0, 0.8);
     color: #FFF;
 }
+
+.dark-theme ::selection {
+    background: rgba(23, 57, 204, 0.8);
+}
+
 /* ссылки */
 a {
     display: inline-block;
     text-decoration: none;
 }
+
 /* картинки */
 img,
 svg {
     vertical-align: top;
 }
+
 /* не выделять отступ */
 br {
     -webkit-touch-callout: none;
@@ -34,14 +47,30 @@ br {
     -moz-user-select: none;
     user-select: none;
 }
+
 /* тело */
 body {
-    color: #5e5e5e;
+    background: #f4f4f4;
+    color: #222;
     font-family: 'Roboto', sans-serif;
     font-family: 'PT Serif', serif;
     font-weight: 400;
     font-size: 14px;
+    transition: all 0.5s ease 0.3s;
 }
+
+body.dark-theme {
+    background: #0e0e0e;
+    color: #d4d4d4;
+    transition: all 0.8s ease 0.3s;
+}
+
+body.dark-theme p,
+body.dark-theme h2 {
+    color: #d4d4d4;
+    transition: all 0.8s ease 0.3s;
+}
+
 
 /* полоска в верху экрана при прокрутке */
 .progress_bar {
@@ -51,6 +80,13 @@ body {
     width: 0;
     height: 4px;
     background-color: rgb(13, 10, 54);
+    transition: all 0.8s ease 0.3s;
+    z-index: 5;
+}
+
+.dark-theme .progress_bar {
+    background-color: rgb(255, 255, 255);
+    transition: all 0.8s ease 0.3s;
 }
 
 /* контейнер для текста на большом экране */
@@ -122,18 +158,19 @@ body {
     background-size: cover;
 }
 
-.hello__content:after{
+.hello__content:after {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     content: '';
-    background: rgba(0,0,0,.5);/* 5 это уровень затемнения */
+    background: rgba(0, 0, 0, .5);
+    /* 5 это уровень затемнения */
     z-index: 2;
 }
 
-.hello__hello{
+.hello__hello {
     position: absolute;
     top: 0;
     left: 0;
@@ -148,11 +185,10 @@ body {
 }
 
 
-
 .hello__hi h1 {
     text-align: center;
     font-size: 4.7em;
-    color: #ddd;
+    color: #f4f4f4;
     /* анимация */
     transform: translate(0%, -200%);
     opacity: 0;
@@ -168,7 +204,7 @@ body {
 .hello__text h2 {
     text-align: center;
     font-size: 3.4em;
-    color: #ddd;
+    color: #f4f4f4;
     /* анимация */
     transform: translate(0%, 200%);
     opacity: 0;
@@ -181,9 +217,9 @@ body {
     opacity: 1;
 }
 
-.hello__text p{
+.hello__text p {
     text-align: center;
-    color: #FFF;
+    color: #f4f4f4;
     /* анимация */
     transform: translate(-45%, 200%);
     opacity: 0;
@@ -198,7 +234,12 @@ body {
 
 
 /* ТЕКСТ */
-.text__title h2{
+.btn-theme {
+    cursor: pointer;
+    user-select: none;
+}
+
+.text__title h2 {
     text-align: center;
     font-size: 30px;
     color: #222;
@@ -206,25 +247,30 @@ body {
     opacity: 0;
     transition: all 0.8s ease 0.3s;
 }
-.text__title h2._active{
+
+.text__title h2._active {
     transform: translate(0px, 0px);
     opacity: 1;
 }
+
 h2 {
     text-align: center;
     font-size: 30px;
     color: #222;
+    transition: all 0.5s ease 0.3s;
 }
 
 h3 {
     text-indent: 13px;
     font-size: 25px;
+    transition: all 0.5s ease 0.3s;
 }
 
 p {
     text-indent: 13px;
     font-size: 20px;
     color: #222;
+    transition: all 0.5s ease 0.3s;
 }
 
 /* списки */
@@ -233,22 +279,41 @@ li {
     margin-left: 30px;
     font-size: 19px;
     font-weight: 500;
-    color: rgb(29, 29, 29);
+    transition: all 0.5s ease 0.3s;
+    /* color: rgb(29, 29, 29); */
 }
+
 /* Цитаты */
 .quote {
     background-color: rgba(164, 46, 175, 0.3);
     border-radius: 3px;
+    transition: all 0.8s ease 0.3s;
+}
+
+.dark-theme .quote {
+    background-color: rgba(163, 149, 85, 0.3)
 }
 
 .quote::selection {
     background-color: rgb(163, 73, 73);
     color: #FFF;
+    transition: all 0.8s ease 0.3s;
 }
+
+.dark-theme .quote::selection {
+    background-color: rgba(49, 160, 49, 0.699);
+}
+
 /* Код */
 .code {
     background-color: rgba(74, 138, 14, 0.4);
     border-radius: 4px;
+    transition: all 0.8s ease 0.3s;
+}
+
+.dark-theme .code {
+    background-color: rgba(15, 226, 54, 0.226);
+    transition: all 0.8s ease 0.3s;
 }
 
 .code::selection {
@@ -256,6 +321,10 @@ li {
     color: #FFF;
 }
 
+.dark-theme .code::selection {
+    background-color: rgba(177, 67, 211, 0.555);
+    color: #FFF;
+}
 
 /* ПОДВАЛ */
 footer {
@@ -269,6 +338,6 @@ footer {
     align-items: center;
 }
 
-.foot {
-    color: #FFF;
+footer p {
+    color: #ddd;
 }

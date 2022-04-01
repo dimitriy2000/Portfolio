@@ -8,7 +8,7 @@ function progressBar(e) {
   let windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
   let percent = windowScroll / windowHeight * 100;
 
-PROGRESS_BAR.style.width = percent + '%';
+  PROGRESS_BAR.style.width = percent + '%';
 }
 // Анимация текста при загрузке страницы и скроле(откл)
 const ANIMATE_ITEMS = document.querySelectorAll('._animate-items');
@@ -45,3 +45,8 @@ if (ANIMATE_ITEMS.length > 0) {
   }
   animOnScroll();
 }
+
+//Смена фона
+document.querySelector(".btn-theme").addEventListener("click", function () {
+  document.body.classList.toggle("dark-theme");
+});
