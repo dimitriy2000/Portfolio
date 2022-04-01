@@ -80,13 +80,11 @@ body.dark-theme h2 {
     width: 0;
     height: 4px;
     background-color: rgb(13, 10, 54);
-    transition: all 0.8s ease 0.3s;
     z-index: 5;
 }
 
 .dark-theme .progress_bar {
     background-color: rgb(255, 255, 255);
-    transition: all 0.8s ease 0.3s;
 }
 
 /* контейнер для текста на большом экране */
